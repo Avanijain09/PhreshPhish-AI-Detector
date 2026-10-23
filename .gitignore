@@ -1,0 +1,12 @@
+# Ignore virtual environment
+venv/
+
+# Ignore heavy AI model files
+*.gguf
+Modelfile
+outputs/
+phreshphish_model/
+
+# Ignore python cache
+__pycache__/
+*.pyc
