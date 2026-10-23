@@ -20,7 +20,31 @@ An advanced, AI-driven phishing detection application powered by a custom fine-t
 
 Follow these instructions to run the PhreshPhish AI detector on your local machine.
 
-### 1. Clone the Repository
-```bash
+## 1. Clone the Repository
+
 git clone [https://github.com/Avanijain09/PhreshPhish-AI-Detector.git](https://github.com/Avanijain09/PhreshPhish-AI-Detector.git)
 cd PhreshPhish-AI-Detector
+
+2. Set Up Virtual Environment
+   
+python -m venv venv
+# On Windows
+venv\Scripts\activate
+# On Mac/Linux
+source venv/bin/activate
+
+pip install -r requirements.txt
+3. Load the Custom AI Model
+Since the GGUF model file is large (~2GB), it is not hosted directly on GitHub.
+
+Install Ollama on your system.
+
+Place your fine-tuned model file (Llama-3.2-3B-Instruct.Q4_K_M.gguf) in the root directory.
+
+Build the model in Ollama using the provided Modelfile:
+
+ollama create phreshphish_ai -f Modelfile
+4. Run the Application
+
+streamlit run app.py
+The application will launch in your default web browser at http://localhost:8501
